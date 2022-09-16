@@ -81,31 +81,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!--end of modal-->
-
-
-
-
-
-
-
-
-
-
-
           <div class="box-header">
             <h3 class="box-title"> LISTA USUARIOS</h3>
           </div><!-- /.box-header -->
@@ -155,7 +130,6 @@
 
                       ?>
                       <a class="small-box-footer btn-print" href="<?php echo "eliminar_usuario.php?cid=$cid"; ?>" onClick="return confirm('¿Está seguro de que quieres eliminar usuario??');"><i class="glyphicon glyphicon-remove"></i></a>
-                      <a class="small-box-footer btn-print" href="<?php echo "editar_password.php?cid=$cid"; ?>"><i class="glyphicon glyphicon-eye-open"></i></a>
                       <a class="btn btn-danger btn-print" href="<?php echo "editar_usuario.php?cid=$cid"; ?>" role="button">Editar</a>
                       <?php
                       //          }
@@ -191,7 +165,7 @@
   <!-- footer content -->
   <footer>
     <div class="pull-right">
-      APSYSTEM <a href="#"></a>
+      FITNESSCLUB GYM <a href="#"></a>
     </div>
     <div class="clearfix"></div>
   </footer>
@@ -208,8 +182,8 @@
       $('#example2').dataTable({
           "language": {
             "paginate": {
-              "previous": "anterior",
-              "next": "posterior"
+              "previous": "Anterior",
+              "next": "Posterior"
             },
             "search": "Buscar:",
 

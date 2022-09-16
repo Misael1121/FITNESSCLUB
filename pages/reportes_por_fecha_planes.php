@@ -31,46 +31,45 @@
           </div>
           <!--end of modal-dialog-->
         </div>
+        <center>
+          <div class="container">
+                <div class="col-md-3">
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_fecha_planes.php" enctype="multipart/form-data" class="form-horizontal">
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha Inicio</label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="date" name="fecha_inicio" required>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                </div>
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha Final</label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="date" name="fecha_final" required>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                </div>
 
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_fecha_planes.php" enctype="multipart/form-data" class="form-horizontal">
-              <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR ENTRE FECHAS</button>
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha inicio</label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="date" name="fecha_inicio" required>
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-              </div>
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha final</label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="date" name="fecha_final" required>
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-              </div>
+                <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR ENTRE FECHAS</button>
 
-
-              <div class="col-md-12">
                 <div class="col-md-12">
+                  <div class="col-md-12">
 
+                  </div>
 
                 </div>
 
-              </div>
-
-            </form>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                 
+                  </div>
                 </div>
-              <div class="col-md-3">
-               
-                </div>
-              </div>
+        </center>
         <!--end of modal-->
 
         <div class="box-body">
@@ -83,21 +82,19 @@
 
 
           <div class="box-header">
-            <h3 class="box-title"> Lista datos</h3>
+            <h3 class="box-title"> <b> Lista Datos </b></h3>
           </div><!-- /.box-header -->
           <div class="box-body">
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Nombre cliente</th>
-                  <th>Dni</th>
-                  <th>En meses/dias </th>
-
-
-                  <th>Numero de meses/dias </th>
-                  <th>Fecha inicio </th>
-                  <th>Fecha fin</th>
-                  <th class="btn-print"> ACCION </th>
+                  <th>Nombre Cliente</th>
+                  <th>DPI</th>
+                  <th>Tipo De Tiempo </th>
+                  <th>Cantidad </th>
+                  <th>Fecha Inicio </th>
+                  <th>Fecha Fin</th>
+                  <th class="btn-print"> Accion </th>
 
 
                 </tr>
@@ -128,7 +125,7 @@
 
                   <div class="row">
                     <div class="col-md-4 col-lg-12 hide-section">
-                      <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Nro ELEMENTOS= <label style='color:black;  font-size: 25px '>=<?php echo $contador; ?></label></a>
+                      <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Planes =<label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
 
 
@@ -158,9 +155,8 @@
                     <tr>
 
                       <td><?php echo $row['nombre']; ?></td>
-                      <td><?php echo $row['dni']; ?></td>
+                      <td><?php echo $row['dpi']; ?></td>
                       <td><?php echo $row['tipo_tiempo']; ?></td>
-
                       <td><?php echo $row['numero_tiempo']; ?></td>
                       <td><?php echo $row['fecha_inicio']; ?></td>
                       <td><?php echo $row['fecha_fin']; ?></td>
@@ -170,7 +166,7 @@
 
 
                         ?>
-                        <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver comprobante</a>
+                        <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
 
 
                         <?php
@@ -194,10 +190,7 @@
 
 
 
-              <footer>
 
-                <div class="clearfix"></div>
-              </footer>
               <!-- /footer content -->
           </div>
         </div>

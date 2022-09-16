@@ -180,7 +180,7 @@
 
 
                   <th>Id</th>
-                  <th>Id</th>
+                  <th>Nombre</th>
                   <th>Tipo de tiempo</th>
                   <th> Tiempo Del Plan </th>
                   <th> Descripcion </th>

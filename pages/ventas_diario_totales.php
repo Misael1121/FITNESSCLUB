@@ -45,16 +45,16 @@
 
 
           <div class="box-header">
-            <h3 class="box-title"> LISTAS VENTAS DIARIO</h3>
+            <h3 class="box-title"><b> LISTAS VENTAS DIARIO </b></h3>
           </div><!-- /.box-header -->
           <div class="box-body">
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Nombre cliente</th>
+                  <th>Nombre Cliente</th>
                   <th>DPI</th>
                   <th>Fecha </th>
-                  <th class="btn-print"> ACCION </th>
+                  <th class="btn-print"> Accion </th>
 
                 </tr>
               </thead>
@@ -86,7 +86,7 @@
 
                 <div class="row">
                   <div class="col-md-4 col-lg-12 hide-section">
-                    <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Nro ELEMENTOS= <label style='color:black;  font-size: 25px '>=<?php echo $contador; ?></label></a>
+                    <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Ventas Diarias = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
 
 
@@ -119,7 +119,7 @@
 
 
                       ?>
-                      <a class="btn btn-danger btn-print" href="<?php echo "generar_ticket_diario.php?codigo=$codigo"; ?>" role="button">Ver comprobante</a>
+                      <a class="btn btn-danger btn-print" href="<?php echo "generar_ticket_diario.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
 
 
                       <?php
@@ -142,15 +142,6 @@
 
 
 
-
-
-
-
-
-              <footer>
-
-                <div class="clearfix"></div>
-              </footer>
               <!-- /footer content -->
           </div>
         </div>
@@ -164,8 +155,8 @@
             $('#example2').dataTable({
                 "language": {
                   "paginate": {
-                    "previous": "anterior",
-                    "next": "posterior"
+                    "previous": "Anterior",
+                    "next": "Posterior"
                   },
                   "search": "Buscar:",
 
@@ -186,4 +177,3 @@
 </body>
 
 </html>
-}

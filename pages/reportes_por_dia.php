@@ -31,20 +31,22 @@
           </div>
           <!--end of modal-dialog-->
         </div>
-
+        <center>
         <div class="container">
               <div class="col-md-3">
              
                 </div>
               <div class="col-md-3">
                 <form method="post" action="reportes_por_dia.php" enctype="multipart/form-data" class="form-horizontal">
-              <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
+              
               <div class="col-md-12 btn-print">
                 <div class="form-group">
                   <label for="date" class="col-sm-3 control-label">Fecha </label>
                   <div class="input-group col-sm-8">
                     <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
                   </div><!-- /.input group -->
+                  <br>
+                  <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
                 </div><!-- /.form group -->
               </div>
 
@@ -64,6 +66,7 @@
                
                 </div>
               </div>
+</center>
         <!--end of modal-->
 
 
@@ -77,18 +80,16 @@
 
 
           <div class="box-header">
-            <h3 class="box-title"> Lista datos</h3>
+            <h3 class="box-title"><b> Lista Datos </b></h3>
           </div><!-- /.box-header -->
           <div class="box-body">
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th> Id </th>
-                  <th> fecha </th>
-
-                  <th> cliente </th>
-
-                  <th class="btn-print"> ACCION </th>
+                  <th> Fecha </th>
+                  <th> Cliente </th>
+                  <th class="btn-print"> Accion </th>
                 </tr>
               </thead>
               <tbody>
@@ -120,7 +121,7 @@
 
                   <div class="row">
                     <div class="col-md-4 col-lg-12 hide-section">
-                      <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Nro ELEMENTOS= <label style='color:black;  font-size: 25px '>=<?php echo $contador; ?></label></a><br>
+                      <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Productos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a><br>
 
 
 
@@ -151,7 +152,7 @@ INNER JOIN clientes AS u
 
 
                         ?>
-                        <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver comprobante</a>
+                        <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver Comprobante</a>
 
 
                         <?php
@@ -172,17 +173,6 @@ INNER JOIN clientes AS u
               </tbody>
 
 
-
-
-
-
-
-
-
-              <footer>
-
-                <div class="clearfix"></div>
-              </footer>
               <!-- /footer content -->
           </div>
         </div>

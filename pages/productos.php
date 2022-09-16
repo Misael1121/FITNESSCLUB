@@ -377,8 +377,8 @@
         $('#example2').dataTable({
             "language": {
               "paginate": {
-                "previous": "anterior",
-                "next": "posterior"
+                "previous": "Anterior",
+                "next": "Posterior"
               },
               "search": "Buscar:",
 

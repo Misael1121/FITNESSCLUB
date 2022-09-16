@@ -48,20 +48,20 @@
 
           </form>
           <div class="box-header">
-            <h3 class="box-title"> LISTA MEMBRESIAS</h3>
+            <h3 class="box-title"> <b> LISTA PLANES </b></h3>
           </div><!-- /.box-header -->
           <div class="box-body">
             <table id="example22" class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Codigo</th>
-                  <th>Nombre cliente</th>
+                  <th>Nombre Cliente</th>
                   <th>DPI</th>
                   <th>Tipo Plan </th>
                   <th>Tiempo </th>
-                  <th>Fecha inicio </th>
-                  <th>Fecha fin</th>
-                  <th class="btn-print"> ACCION </th>
+                  <th>Fecha Inicio </th>
+                  <th>Fecha Fin</th>
+                  <th class="btn-print"> Accion </th>
 
                 </tr>
               </thead>
@@ -94,7 +94,7 @@
 
                 <div class="row">
                   <div class="col-md-4 col-lg-12 hide-section">
-                    <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Nro ELEMENTOS= <label style='color:black;  font-size: 25px '>=<?php echo $contador; ?></label></a>
+                    <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Planes Vendidos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
 
 
@@ -133,7 +133,7 @@
 
 
                       ?>
-                      <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver comprobante</a>
+                      <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
 
 
                       <?php
@@ -188,13 +188,6 @@
                 // ]]>
               </script>
 
-
-
-
-              <footer>
-
-                <div class="clearfix"></div>
-              </footer>
               <!-- /footer content -->
           </div>
         </div>
