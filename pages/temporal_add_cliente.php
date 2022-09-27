@@ -1,7 +1,6 @@
  <?php
   session_start();
   include('../dist/includes/dbcon.php');
-  //$branch=$_SESSION['branch'];
 
 
 

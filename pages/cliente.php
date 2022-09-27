@@ -7,10 +7,7 @@
 <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
 <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-<!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-
 <body class="nav-md">
   <div class="container body">
     <div class="main_container">
@@ -69,30 +66,20 @@
 
         <div class="box-body">
 
-
-
           <!--end of modal-->
-
-
           <div class="box-header">
             <h3 class="box-title"> LISTA CLIENTES</h3>
           </div><!-- /.box-header -->
-
-
-
           <div class="box-body">
 
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-
                   <th>ID</th>
-
                   <th>Nombre y apellidos</th>
                   <th>Telefono</th>
                   <th>Edad</th>
                   <th>DPI</th>
-
                   <th class="btn-print"> Accion </th>
                 </tr>
               </thead>
@@ -108,18 +95,14 @@
                   <tr>
 
                     <td><?php echo $i; ?></td>
-
                     <td><?php echo $row['nombre']; ?></td>
                     <td><?php echo $row['telefono']; ?></td>
                     <td><?php echo $row['edad']; ?></td>
                     <td><?php echo $row['dpi']; ?></td>
-
                     <td>
                       <?php
 
-
                       ?>
-
 
                       <a class="btn btn-danger btn-print" href="<?php echo "editar_cliente.php?id_cliente=$id_cliente"; ?>" role="button">Editar</a>
                       <?php
@@ -133,20 +116,11 @@
 
                 <?php } ?>
               </tbody>
-
             </table>
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -166,8 +140,6 @@
 
   <?php include 'datatable_script.php'; ?>
 
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -177,8 +149,6 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
-
           },
           "lengthMenu": [
             [10, 25, 50, -1],

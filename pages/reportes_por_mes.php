@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -25,68 +24,56 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x-panel">
-
             </div>
-
           </div>
           <!--end of modal-dialog-->
         </div>
-      <center>
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_mes.php" enctype="multipart/form-data" class="form-horizontal">
-              
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">SELCCIONE MES </label>
-                  <div class="input-group col-sm-8">
+        <center>
+          <div class="container">
+                <div class="col-md-3">
+               
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_mes.php" enctype="multipart/form-data" class="form-horizontal">
 
-                    <select name="mes" class="form-control select2" autofocus required>
-                      <option value="1">Enero</option>
-                      <option value="2">Febrero</option>
-                      <option value="3">Marso</option>
-                      <option value="4">Abril</option>
-                      <option value="5">Mayo</option>
-                      <option value="6">Junio</option>
-                      <option value="7">Julio</option>
-                      <option value="8">Agosto</option>
-                      <option value="9">Setiembre</option>
-                      <option value="10">Octubre</option>
-                      <option value="11">Noviembre</option>
-                      <option value="12">Diciembre</option>
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">SELCCIONE MES </label>
+                    <div class="input-group col-sm-8">
 
-                    </select>
+                      <select name="mes" class="form-control select2" autofocus required>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marso</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                      </select>
 
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-                <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR MES</button>
-              </div>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                  <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR MES</button>
+                </div>
 
-
-
-
-
-
-
-
-              <div class="col-md-12">
                 <div class="col-md-12">
-
+                  <div class="col-md-12">
+                  </div>
 
                 </div>
 
-              </div>
-
-            </form>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                 
+                  </div>
                 </div>
-              <div class="col-md-3">
-               
-                </div>
-              </div>
-</center>
+        </center>
         <!--end of modal-->
 
         <div class="box-body">
@@ -107,7 +94,6 @@
                 <tr>
                   <th> Id </th>
                   <th> Fecha </th>
-
                   <th> Cliente </th>
                   <th class="btn-print"> Accion </th>
 
@@ -115,14 +101,7 @@
               </thead>
               <tbody>
 
-
-
-
-
                 <?php
-
-
-
 
 
                 if (isset($_POST['buscar_fechas'])) {
@@ -144,19 +123,11 @@
                     <div class="col-md-4 col-lg-12 hide-section">
                       <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Productos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
-
-
                     </div>
-
 
                   </div>
 
                   <?php
-
-
-
-
-
 
                   $query = mysqli_query($con, "select * from pedidos AS p
 INNER JOIN clientes AS u
@@ -174,13 +145,12 @@ INNER JOIN clientes AS u
                       <td>
                         <?php
 
-
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver Comprobante</a>
 
 
                         <?php
-                        //          }
+
                         ?>
 
                       </td>
@@ -190,13 +160,9 @@ INNER JOIN clientes AS u
                   }
                 }
                 ?>
-
-
                 <!--end of modal-->
 
               </tbody>
-
-
               <!-- /footer content -->
           </div>
         </div>

@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -15,61 +14,52 @@
   <div class="container body">
     <div class="main_container">
       <?php include 'main_sidebar.php'; ?>
-
       <!-- top navigation -->
       <?php include 'top_nav.php'; ?>
       <!-- /top navigation -->
-
       <!-- page content -->
       <div class="right_col" role="main">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x-panel">
-
             </div>
-
           </div>
           <!--end of modal-dialog-->
         </div>
         <center>
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_dia_planes.php" enctype="multipart/form-data" class="form-horizontal">
-              <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label"> Fecha </label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-              </div>
-
-              <div class="col-md-12">
-                <div class="col-md-12">
+          <div class="container">
+                <div class="col-md-3">
+               
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_dia_planes.php" enctype="multipart/form-data" class="form-horizontal">
+                <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label"> Fecha </label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
                 </div>
-              </div>
-            </form>
+                <div class="col-md-12">
+                  <div class="col-md-12">
+                  </div>
+                </div>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                  </div>
                 </div>
-              <div class="col-md-3">
-                </div>
-              </div>
-          </center>
+        </center>
         <!--end of modal-->
 
 
         <div class="box-body">
           <!-- Date range -->
           <section class="content-header">
-
           </section>
-
           <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
-
-
           <div class="box-header">
             <h3 class="box-title"> <b> Lista Datos </b></h3>
           </div><!-- /.box-header -->
@@ -83,7 +73,6 @@
                   <th>Cantidad </th>
                   <th>Fecha Inicio </th>
                   <th>Fecha Fin</th>
-
                   <th class="btn-print"> Accion </th>
                 </tr>
               </thead>
@@ -97,7 +86,6 @@
                 ?>
 
                   <?php
-
                   $query = mysqli_query($con, "select * from planes AS p INNER JOIN plan_cliente AS z
       ON p.id_plan = z.id_plan INNER JOIN clientes AS c
       ON c.id_cliente = z.id_cliente   where  fecha_inicio ='$fecha'   ") or die(mysqli_error());
@@ -106,14 +94,11 @@
                   while ($row = mysqli_fetch_array($query)) {
                     $contador++;
                   }
-
                   ?>
 
                   <div class="row">
                     <div class="col-md-4 col-lg-12 hide-section">
                       <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Planes = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a><br>
-
-
                     </div>
 
 
@@ -135,11 +120,9 @@
                       <td><?php echo $row['nombre']; ?></td>
                       <td><?php echo $row['dpi']; ?></td>
                       <td><?php echo $row['tipo_tiempo']; ?></td>
-
                       <td><?php echo $row['numero_tiempo']; ?></td>
                       <td><?php echo $row['fecha_inicio']; ?></td>
                       <td><?php echo $row['fecha_fin']; ?></td>
-
                       <td>
                         <?php
 
@@ -147,9 +130,8 @@
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
 
-
                         <?php
-                        //          }
+
                         ?>
 
                       </td>
@@ -159,20 +141,14 @@
                   }
                 }
                 ?>
-
-
                 <!--end of modal-->
 
               </tbody>
-
-
               <!-- /footer content -->
           </div>
         </div>
 
         <?php include 'datatable_script.php'; ?>
-
-
 
         <script>
           $(document).ready(function() {

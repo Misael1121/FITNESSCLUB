@@ -96,8 +96,7 @@ $codigo = $_GET['codigo'];
   while ($row6 = mysqli_fetch_array($query6)) {
     $fecha = $row6['fecha'];
     $nombre_cliente = $row6['nombre'];
-    $dpi = $row6['dpi']; //hora incial
-
+    $dpi = $row6['dpi'];
   }
 
 
@@ -115,24 +114,17 @@ $codigo = $_GET['codigo'];
   <div id="page-wrap">
 
     <div class="container">
-
-
       <br>
       <br>
-
-
-
       <center>
         <h3>TCIKET PAGO /DIARIO</h3>
       </center>
-
 
       <center>
         <table class="table table-bordered table-striped" style="border:none;">
           <thead>
             <tr>
               <th style="border:none;">
-
                 <?php echo $nombre_empresa; ?>
                 <br>
                 Calle: <?php echo $direccion_empresa; ?>
@@ -162,16 +154,13 @@ $codigo = $_GET['codigo'];
             </tr>
           </thead>
           <tbody>
-
           </tbody>
-
         </table>
-
       </center>
+      <br>
+      <br>
+      <br>
 
-      <br>
-      <br>
-      <br>
       <center>
         <a class="btn btn-success btn-print" style="    text-decoration: none;
     padding: 10px;
@@ -184,9 +173,6 @@ $codigo = $_GET['codigo'];
         <br>
         <br>
         <br>
-
-
-
         <a class="btn btn-success btn-print" style="    text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -197,10 +183,6 @@ $codigo = $_GET['codigo'];
     border: 2px solid #0016b0; " href="ventas_diario_totales.php"><i class="glyphicon glyphicon-print"></i>Regresar</a>
       </center>
     </div>
-
-
-
-
 
 </body>
 

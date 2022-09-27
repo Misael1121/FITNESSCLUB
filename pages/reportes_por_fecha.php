@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -54,11 +53,11 @@
                     <div class="input-group col-sm-8">
                       <input type="date" class="form-control pull-right" id="date" name="fecha_final" required>
                     </div><!-- /.input group -->
-                  </div><!-- /.form group -->  
-                <br>
+                  </div><!-- /.form group -->
+                  <br>
                   <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR ENTRE FECHAS</button>
                 </div>
-              
+
 
                 <div class="col-md-12">
                   <div class="col-md-12">
@@ -97,20 +96,12 @@
                   <th> Fecha </th>
                   <th> Cliente </th>
                   <th class="btn-print"> Accion </th>
-
-
                 </tr>
               </thead>
               <tbody>
 
 
-
-
-
                 <?php
-
-
-
 
 
                 if (isset($_POST['buscar_fechas'])) {
@@ -132,18 +123,12 @@
                     <div class="col-md-4 col-lg-12 hide-section">
                       <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Productos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
-
-
                     </div>
 
 
                   </div>
 
                   <?php
-
-
-
-
 
 
                   $query = mysqli_query($con, "select * from pedidos AS p
@@ -162,13 +147,11 @@ INNER JOIN clientes AS u
                       <td>
                         <?php
 
-
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver Comprobante</a>
 
 
                         <?php
-                        //          }
                         ?>
 
                       </td>

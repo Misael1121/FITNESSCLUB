@@ -1,6 +1,4 @@
 <?php include 'header.php';
-
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -91,11 +89,6 @@
                 </div>
               </div>
 
-
-
-
-
-
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-red">
@@ -120,10 +113,6 @@
                   <?php echo ($num > 0) ? '<a href="productos.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                 </div>
               </div>
-
-
-
-
 
               <?php
               if ($tipo == "administrador") {
@@ -151,18 +140,13 @@
                     <?php echo ($num > 0) ? '<a href="usuario.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                   </div>
                 </div>
-
-
               <?php
               }
               ?>
 
-
               <?php
               if ($tipo == "administrador") {
-
               ?>
-
 
                 <div class="col-lg-3 col-xs-6">
                   <!-- small box -->
@@ -183,13 +167,9 @@
                     <?php echo ($num > 0) ? '<a href="configuracion.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                   </div>
                 </div>
-
-
               <?php
               }
               ?>
-
-
 
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
@@ -216,10 +196,6 @@
                 </div>
               </div>
 
-
-
-
-
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-purple">
@@ -242,8 +218,6 @@
                 </div>
               </div>
 
-
-
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-aqua">
@@ -265,7 +239,6 @@
                   <?php echo ($num > 0) ? '<a href="ventas_planes_lista.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                 </div>
               </div>
-
 
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
@@ -292,17 +265,10 @@
                   <?php echo ($num > 0) ? '<a href="ventas.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                 </div>
               </div>
-
-
             </div>
             <!--row-->
 
-
-
-
           </div><!-- /.col (right) -->
-
-
 
           <div class="box-body">
             <div class="row">
@@ -356,23 +322,11 @@
                   <?php echo ($num > 0) ? '<a href="plan_cliente.php" class="small-box-footer">Mas Info<i class="fa fa-arrow-circle-right"></i></a>' : '<a href="#" class="small-box-footer">-------</a>'; ?>
                 </div>
               </div>
-
-
             </div>
-
           </div>
-
-
         </div><!-- /.box-body -->
-
       </div><!-- /.col -->
-
-
     </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
 
   </div>
@@ -394,8 +348,6 @@
 
   <?php include 'datatable_script.php'; ?>
 
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -405,7 +357,6 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
 
           },
 

@@ -4,22 +4,17 @@ if (empty($_SESSION['id'])) :
 endif;
 $num_pedido = $_GET['num_pedido'];
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-
-
   <title>COMPROBANTE</title>
 
   <link rel='stylesheet' type='text/css' href='css/style.css' />
   <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
   <script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
   <script type='text/javascript' src='js/example.js'></script>
-
-
   <style>
     .left {
       float: left;
@@ -76,7 +71,6 @@ $num_pedido = $_GET['num_pedido'];
   <?php
   include('../dist/includes/dbcon.php');
 
-
   ?>
 
   <?php
@@ -111,8 +105,6 @@ $num_pedido = $_GET['num_pedido'];
     $telefono_vendedor = $row2['telefono'];
   }
 
-
-
   $sum = 0;
 
 
@@ -122,10 +114,6 @@ $num_pedido = $_GET['num_pedido'];
   while ($row5 = mysqli_fetch_array($query5)) {
     $sum = $sum + $row5['precio_venta'] * $row5['cantidad'] + ($row5['precio_venta'] * $row5['cantidad']) * $impuesto_producto / 100;
   }
-
-
-
-
 
   ?>
 
@@ -139,10 +127,7 @@ $num_pedido = $_GET['num_pedido'];
         <div id="customer">
 
         </div>
-
       </div>
-
-
 
       <div class="left">
         <table class="table table-bordered table-striped" style="border:none;">
@@ -157,18 +142,11 @@ $num_pedido = $_GET['num_pedido'];
               <td style="border:none; "></td>
               <td style="border:none; "></td>
               <td style="border:none; "></td>
-
-
-
               <td style="border:none;">
                 <h3><?php echo $empresa; ?></h3>
                 <h3><?php echo $direccion; ?></h3>
-
                 <h3>Cliente: <?php echo $nombre_cliente; ?></h3>
                 <h3>Telefono: <?php echo $telefono_cliente; ?></h3>
-
-
-
               </td>
               <td style="border:none;">&nbsp;</td>
               <td style="border:none;">&nbsp;</td>
@@ -185,34 +163,22 @@ $num_pedido = $_GET['num_pedido'];
               <td style="border:none;">&nbsp;</td>
               <td style="border:none; ">&nbsp;</td>
             </tr>
-
-
           </tbody>
         </table>
 
-
       </div>
       <div class="right">
-
         <div id="customer">
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-
-
                 <th>
                   <h3>Num: <?php echo $num_pedido; ?></h3>
                   <h3> Fecha: <?php echo $fecha; ?></h3>
                 </th>
-
-
-
               </tr>
             </thead>
             <tbody>
-
-
-
             </tbody>
 
           </table>
@@ -220,27 +186,13 @@ $num_pedido = $_GET['num_pedido'];
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-
-
-
                 </th>
-
-
-
               </tr>
             </thead>
             <tbody>
-
-
-
             </tbody>
-
           </table>
           <br>
-
-
-
-
         </div>
 
       </div>
@@ -279,9 +231,7 @@ $num_pedido = $_GET['num_pedido'];
             <td style="border:none; "></td>
             <td style="border:none; "></td>
             <td style="border:none; "></td>
-
             <h4></h4>
-
             </td>
             <td style="border:none;">&nbsp;</td>
             <td style="border:none;">&nbsp;</td>
@@ -298,11 +248,8 @@ $num_pedido = $_GET['num_pedido'];
             <td style="border:none;">&nbsp;</td>
             <td style="border:none; ">&nbsp;</td>
           </tr>
-
-
         </tbody>
       </table>
-
       <center>
         <h1><?php echo $empresa; ?></h1>
       </center>
@@ -319,40 +266,21 @@ $num_pedido = $_GET['num_pedido'];
             <td style="border:none; "></td>
             <td style="border:none; "></td>
             <td style="border:none; "></td>
-
-
-
             <td style="border:none;">
               <h5>Concepto venta </h5>
-
-
               <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
               <a class="btn btn-primary btn-print" href="ventas_planes_totales.php"><i class="glyphicon glyphicon-arrow-left"></i>Volver Al inicio</a>
-
             </td>
             <td style="border:none;">&nbsp;</td>
             <td style="border:none;">&nbsp;</td>
           </tr>
-
-
-
         </tbody>
       </table>
-
-
-
-
-
-
-
       <br>
-
-
 
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-
             <td style="border:none;"> </td>
             <td style="border:none;"></td>
             <td style="border:none;"></td>
@@ -362,9 +290,6 @@ $num_pedido = $_GET['num_pedido'];
             <td style="border:none; "></td>
             <td style="border:none; "></td>
             <td style="border:none; "></td>
-
-
-
             <td style="border:none;">
             <th style="border:none;">Nombre Producto</th>
             <th style="border:none;">Cantidad</th>
@@ -395,9 +320,6 @@ INNER JOIN detalles_pedido AS t
               <td style="border:none; "></td>
               <td style="border:none; "></td>
               <td style="border:none; "></td>
-
-
-
               <td style="border:none;">
               <td style="width: 300px;"><?php echo $row4['nombre_pro']; ?></td>
               <td style="width: 300px;"><?php echo $row4['cantidad']; ?></td>
@@ -410,12 +332,9 @@ INNER JOIN detalles_pedido AS t
           }
           ?>
 
-
         </tbody>
 
       </table>
-
-
 
       <div class="left">
 
@@ -423,12 +342,8 @@ INNER JOIN detalles_pedido AS t
           <thead>
             <tr>
               <th style="border:none;"></th>
-
-
               <th style="border:none;"></th>
               <th style="border:none;"></th>
-
-
             </tr>
           </thead>
           <tbody>
@@ -444,41 +359,19 @@ INNER JOIN detalles_pedido AS t
               <td style="border:none; "></td>
               <td style="border:none; "></td>
               <td style="border:none; "></td>
-
-
-
               <td style="border:none;">
-
-
-
             </tr>
-
-
-
-
             </tr>
           </tbody>
-
         </table>
-
-
       </div>
-
-
 
       <div class="right">
 
         <div id="customer">
-
-
-
-
-
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-
-
                 <td>
                   <h4>TOTAL </h4>
                 </td>
@@ -486,52 +379,29 @@ INNER JOIN detalles_pedido AS t
                   <h4><?php echo $sum; ?> </h4><br>
                 </td>
                 </th>
-
-
-
               </tr>
             </thead>
             <tbody>
-
-
-
             </tbody>
-
           </table>
         </div>
-
       </div>
-
-
-
-
-
       <br>
       <br>
-
       <br><br><br><br><br>
       <p id="terminos">
-
-
       </p>
 
       <CENTER>
-
         <table class="table table-bordered table-striped" style="border:none;">
           <thead>
             <tr>
-
-
               <th style="border:none;"></th>
               <th style="border:none;"></th>
-
-
-
             </tr>
           </thead>
           <tbody>
             <tr>
-
             <tr style="border:none;  width: 70px">
             <tr style="border:none; width: 70px ">
             <tr style="border:none;  ">
@@ -542,7 +412,6 @@ INNER JOIN detalles_pedido AS t
               <td style="border:none;"></td>
               <td style="border:none;"> </td>
               <td style="border:none; "></td>
-
               <td style="border:none;">------------------------------------------------</td>
               <td style="border:none;"> </td>
               <td style="border:none; "></td>
@@ -557,20 +426,15 @@ INNER JOIN detalles_pedido AS t
               <td style="border:none;"></td>
               <td style="border:none;"> </td>
               <td style="border:none; "></td>
-
               <td style="border:none;">ENTREGUE CONFORME</td>
               <td style="border:none;"> </td>
               <td style="border:none; "></td>
             </tr>
-
-
             </tr>
           </tbody>
 
         </table>
       </CENTER>
-
-
 
 </body>
 

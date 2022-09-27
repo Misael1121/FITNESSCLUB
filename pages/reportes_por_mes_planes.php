@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -107,7 +106,6 @@
                   <th>Fecha Inicio </th>
                   <th>Fecha Fin</th>
                   <th class="btn-print"> Accion </th>
-
                 </tr>
               </thead>
               <tbody>
@@ -160,7 +158,6 @@
                       <td><?php echo $row['nombre']; ?></td>
                       <td><?php echo $row['dpi']; ?></td>
                       <td><?php echo $row['tipo_tiempo']; ?></td>
-
                       <td><?php echo $row['numero_tiempo']; ?></td>
                       <td><?php echo $row['fecha_inicio']; ?></td>
                       <td><?php echo $row['fecha_fin']; ?></td>
@@ -173,7 +170,6 @@
 
 
                         <?php
-                        //          }
                         ?>
 
                       </td>

@@ -66,27 +66,7 @@
         <a class="btn btn-warning btn-print" href="usuario.php" style="height:25%; width:15%; font-size: 12px " role="button">Regresar</a>
 
 
-
-
-
-
-
-
-
-
         <div class="box-body">
-
-
-
-
-
-
-
-
-
-
-
-
 
           <form class="form-horizontal" method="post" action="usuario_add.php" enctype='multipart/form-data'>
 
@@ -136,7 +116,7 @@
               </div>
               <div class="col-md-4 btn-print">
                 <div class="form-group">
-                  <input type="text" class="form-control pull-right" id="apellido" name="Apellido" placeholder="Apellido"  required>
+                  <input type="text" class="form-control pull-right" id="apellido" name="Apellido" placeholder="Apellido" required>
                 </div>
               </div>
               <div class="col-md-4 btn-print">
@@ -263,38 +243,15 @@
             <button type="submit" class="btn btn-primary">Guardar cambios</button>
 
 
-
-
-
-
-
-
-
-
-
             <div class="modal-footer">
 
 
             </div>
           </form>
-
-
-
-
-
         </div><!-- /.box-body -->
-
-
       </div><!-- /.col -->
-
-
     </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -305,7 +262,7 @@
   <!-- footer content -->
   <footer>
     <div class="pull-right">
-    FITNESSCLUB GYM <a href="#"></a>
+      FITNESSCLUB GYM <a href="#"></a>
     </div>
     <div class="clearfix"></div>
   </footer>

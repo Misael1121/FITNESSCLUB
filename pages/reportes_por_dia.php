@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -32,41 +31,37 @@
           <!--end of modal-dialog-->
         </div>
         <center>
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_dia.php" enctype="multipart/form-data" class="form-horizontal">
-              
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha </label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
-                  </div><!-- /.input group -->
-                  <br>
-                  <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
-                </div><!-- /.form group -->
-              </div>
+          <div class="container">
+                <div class="col-md-3">
+               
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_dia.php" enctype="multipart/form-data" class="form-horizontal">
 
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha </label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
+                    </div><!-- /.input group -->
+                    <br>
+                    <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
+                  </div><!-- /.form group -->
+                </div>
 
-
-              <div class="col-md-12">
                 <div class="col-md-12">
-
+                  <div class="col-md-12">
+                  </div>
 
                 </div>
 
-              </div>
-
-            </form>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                 
+                  </div>
                 </div>
-              <div class="col-md-3">
-               
-                </div>
-              </div>
-</center>
+        </center>
         <!--end of modal-->
 
 
@@ -95,13 +90,7 @@
               <tbody>
 
 
-
-
-
                 <?php
-
-
-
 
 
                 if (isset($_POST['buscar_fechas'])) {
@@ -146,17 +135,12 @@ INNER JOIN clientes AS u
                       <td><?php echo $row['id_cliente']; ?></td>
                       <td><?php echo $row['fecha']; ?></td>
                       <td><?php echo $row['nombre']; ?></td>
-
                       <td>
                         <?php
-
-
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver Comprobante</a>
-
-
                         <?php
-                        //          }
+
                         ?>
 
                       </td>
@@ -167,12 +151,9 @@ INNER JOIN clientes AS u
                 }
                 ?>
 
-
                 <!--end of modal-->
 
               </tbody>
-
-
               <!-- /footer content -->
           </div>
         </div>

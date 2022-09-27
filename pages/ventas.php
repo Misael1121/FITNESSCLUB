@@ -37,17 +37,17 @@
         <?php
         $fechaactual = date('Y-m-d');
         ?><?php
-              $session_id = $_SESSION['id'];
-              $cont = 0;
-              $id_pedido = "";
-              $query3 = mysqli_query($con, "select * from pedidos ") or die(mysqli_error());
-              while ($row3 = mysqli_fetch_array($query3)) {
-                $cont = $row3['id_pedido'];
-              }
-              $cont = $cont + 1;
-              $id_pedido = $cont . $session_id;
+          $session_id = $_SESSION['id'];
+          $cont = 0;
+          $id_pedido = "";
+          $query3 = mysqli_query($con, "select * from pedidos ") or die(mysqli_error());
+          while ($row3 = mysqli_fetch_array($query3)) {
+            $cont = $row3['id_pedido'];
+          }
+          $cont = $cont + 1;
+          $id_pedido = $cont . $session_id;
 
-              ?>
+          ?>
       </style>
 
       <!-- page content -->
@@ -166,8 +166,6 @@
                     AGREGAR PRODUCTO
                   </button>
 
-
-
                   <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -177,14 +175,11 @@
                               <div class="form-group">
                                 <div class="box-body">
 
-
                                   <form>
                                     <br>
                                     <br>
                                     Busqueda: <input id="txtBusqueda_servicios" type="text" onkeyup="Buscar();" />
                                   </form>
-
-
                                   <table class="table table-striped" id="table_servicios">
                                     <thead>
                                       <th>Nombre</th>
@@ -247,9 +242,7 @@
                                         }
                                       }
                                     }
-                                    // ]]>
                                   </script>
-
                                 </div>
                               </div>
                             </div>
@@ -258,9 +251,7 @@
                       </div>
                     </div>
                   </div>
-
                   <br>
-
                 </div>
 
                 <!--end of modal-->
@@ -276,15 +267,13 @@
 
 
                 <div class="box-header">
-                  <h3 class="box-title">SELECCIONE CLIENTE</h3>
+                  <h3 class="box-title"><b> SELECCIONE CLIENTE </b></h3>
                 </div><!-- /.box-header -->
 
                 <table id="example2" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-
                       <th>#</th>
-
                       <th>Nombre</th>
                       <th>Edad</th>
                       <th>DPI</th>
@@ -294,8 +283,6 @@
                   <tbody>
                     <?php
 
-
-                    // $branch=$_SESSION['branch'];
                     $query = mysqli_query($con, "select * from clientes ") or die(mysqli_error());
                     $i = 0;
                     while ($row = mysqli_fetch_array($query)) {
@@ -303,29 +290,24 @@
                       $i++;
                     ?>
                       <tr>
-
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['edad']; ?></td>
                         <td><?php echo $row['dpi']; ?></td>
 
-
                         <td>
                           <?php
-
 
                           ?>
 
                           <a class="btn btn-danger btn-print" href="<?php echo "temporal_add_cliente_productos.php?id_cliente=$id_cliente"; ?>" role="button">SELECCIONAR</a>
                           <?php
-                          //          }
                           ?>
 
                         </td>
                       </tr>
 
                       <!--end of modal-->
-
                     <?php } ?>
                   </tbody>
 
@@ -336,10 +318,12 @@
 
               <div class="col-md-5 btn-print">
 
-
                 <div class="box-header">
-                  <h3 class="box-title">Producto agregados en tu carrito de compras</h3>
-
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <h3 class="box-title"> <b>Producto Agregados</b></h3>
                 </div><!-- /.box-header -->
 
                 <br>
@@ -352,12 +336,11 @@
                       <th> Cantidad</th>
                       <th> Precio Unitario</th>
                       <th> Precio Total</th>
-                      <th class="btn-print"> ACCIÓN </th>
+                      <th class="btn-print"> Accion </th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
-                    // $branch=$_SESSION['branch'];
                     $query = mysqli_query($con, "select * from producto AS p
     INNER JOIN temporal_pedido AS t
     ON p.id_pro = t.id_producto  where id_pedido='$id_pedido' ") or die(mysqli_error());
@@ -380,13 +363,11 @@
                         <td>
                           <?php
                           ?>
-
                           <a class="small-box-footer btn-print" href="<?php echo "eliminar_temporal_pedidos.php?id_temporal=$id_temporal"; ?>" onClick="return confirm('¿Está seguro de que desea eliminar este producto??');"" > <i class=" glyphicon glyphicon-remove"></i></a>
                           <a href="#updateordinance<?php echo $row['id_temporal']; ?>" data-target="#updateordinance<?php echo $row['id_temporal']; ?>" data-toggle="modal" style="color:#fff;" class="small-box-footer btn-print"><i class="glyphicon glyphicon-edit text-blue"></i></a>
 
                           <?php
                           ?>
-
                         </td>
                       </tr>
 
@@ -396,8 +377,11 @@
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">×</span></button>
-                            <h4 class="modal-title">MODIFICAR</h4>
+                            <center>
+                              <h4 class="modal-title">MODIFICAR</h4>
+                            </center>
                           </div>
+
                           <div class="modal-body" style="width: 50%; height: 100%;">
                             <form class="form-horizontal" method="post" action="actualizar_temporal_pedidos.php" enctype='multipart/form-data'>
 
@@ -406,17 +390,22 @@
 
                               <div class="col-md-12 btn-print">
                                 <div class="form-group">
-                                  <label class="control-label col-lg-3" for="name">Cantidad </label>
+
+                                  <label class="control-label col-lg-3" for="name">
+                                    <h3>Cantidad</h3>
+                                  </label>
+                                  <br>
+                                  <br>
                                   <div class="input-group col-md-8">
                                     <input type="text" class="form-control" id="cantidad" name="cantidad" value="<?php echo $row['cantidad']; ?>" required>
                                   </div>
                                 </div>
                               </div>
 
-                          </div><br><br><br>
+                          </div><br><br><br><br><br><br>
                           <hr>
                           <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                           </div>
                           </form>
@@ -465,8 +454,8 @@
       $('#example2').dataTable({
           "language": {
             "paginate": {
-              "previous": "anterior",
-              "next": "posterior"
+              "previous": "Anterior",
+              "next": "Posterior"
             },
             "search": "Buscar:",
 

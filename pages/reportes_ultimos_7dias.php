@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -43,7 +42,6 @@
 
           <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
 
-
           <div class="box-header">
             <h3 class="box-title"><b>ULTIMOS 7 DIAS</b> </h3>
           </div><!-- /.box-header -->
@@ -53,17 +51,12 @@
                 <tr>
                   <th> Id </th>
                   <th> Fecha </th>
-
                   <th> Cliente </th>
                   <th class="btn-print"> Accion </th>
 
                 </tr>
               </thead>
               <tbody>
-
-
-
-
 
                 <?php
 
@@ -98,11 +91,6 @@
                 <?php
 
 
-
-
-
-
-
                 $query = mysqli_query($con, "select * from pedidos AS p
 INNER JOIN clientes AS u
     ON u.id_cliente = p.id_cliente  where  fecha BETWEEN '$fecha7days' AND '$fechaActual' ") or die(mysqli_error());
@@ -118,13 +106,11 @@ INNER JOIN clientes AS u
                     <td>
                       <?php
 
-
                       ?>
                       <a class="btn btn-danger btn-print" href="<?php echo "generar_pdf.php?num_pedido=$num_pedido"; ?>" role="button">Ver Comprobante</a>
 
 
                       <?php
-                      //          }
                       ?>
 
                     </td>

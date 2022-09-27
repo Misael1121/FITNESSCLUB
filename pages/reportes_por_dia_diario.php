@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -32,42 +31,35 @@
           <!--end of modal-dialog-->
         </div>
         <center>
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_dia_diario.php" enctype="multipart/form-data" class="form-horizontal">
-             
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha </label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
-                  </div><!-- /.input group -->
-                   <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
-                </div><!-- /.form group -->
-              </div>
+          <div class="container">
+                <div class="col-md-3">
+               
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_dia_diario.php" enctype="multipart/form-data" class="form-horizontal">
 
-
-              <div class="col-md-12">
-                <div class="col-md-12">
-
-
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha </label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="fecha" name="fecha" required>
+                    </div><!-- /.input group -->
+                    <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR POR DIA</button>
+                  </div><!-- /.form group -->
                 </div>
 
-              </div>
-
-            </form>
+                <div class="col-md-12">
+                  <div class="col-md-12">
+                  </div>
+                </div>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                 
+                  </div>
                 </div>
-              <div class="col-md-3">
-               
-                </div>
-              </div>
-</center>
+        </center>
         <!--end of modal-->
-
-
         <div class="box-body">
           <!-- Date range -->
           <section class="content-header">
@@ -115,16 +107,9 @@
                   <div class="row">
                     <div class="col-md-4 col-lg-12 hide-section">
                       <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Ventas Diario= <label style='color:black;  font-size: 25px '>=<?php echo $contador; ?></label></a><br>
-
-
-
                     </div>
-
-
                   </div>
-
                   <?php
-
 
                   $query = mysqli_query($con, "select * from  venta_diaria AS z INNER JOIN clientes AS c
       ON c.id_cliente = z.id_cliente  where  fecha ='$fecha' ") or die(mysqli_error());
@@ -141,14 +126,10 @@
 
                       <td>
                         <?php
-
-
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_ticket_diario.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
-
-
                         <?php
-                        //          }
+
                         ?>
 
                       </td>
@@ -158,7 +139,6 @@
                   }
                 }
                 ?>
-
 
                 <!--end of modal-->
 
@@ -170,30 +150,26 @@
 
         <?php include 'datatable_script.php'; ?>
 
-
-
         <script>
           $(document).ready(function() {
             $('#example2').dataTable({
-                "language": {
-                  "paginate": {
-                    "previous": "Anterior",
-                    "next": "Posterior"
-                  },
-                  "search": "Buscar:",
-
-
+              "language": {
+                "paginate": {
+                  "previous": "Anterior",
+                  "next": "Posterior"
                 },
-                "lengthMenu": [
-                  [10, 25, 50, -1],
-                  [10, 25, 50, "All"]
-                ],
+                "search": "Buscar:",
 
 
-                "searching": true,
-              }
+              },
+              "lengthMenu": [
+                [10, 25, 50, -1],
+                [10, 25, 50, "All"]
+              ],
 
-            );
+
+              "searching": true,
+            });
           });
         </script>
         </script>

@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -14,8 +13,6 @@
 
 <body class="nav-md">
   <?php
-  //    if ($usuario=="si") {
-  # code...
 
   ?>
   <div class="container body">
@@ -68,17 +65,12 @@
 
         <?php
 
-        //         if ($guardar=="si") {
-
         ?>
 
         <?php
-        //       }
         ?>
 
         <!-- Date range -->
-
-
 
         <!--end of modal-->
 
@@ -91,9 +83,8 @@
 
         <div class="box-body">
 
-
           <?php
-          // $branch=$_SESSION['branch'];
+
           $query = mysqli_query($con, "select * from usuario where id= '$cid' ") or die(mysqli_error());
           $i = 1;
           while ($row = mysqli_fetch_array($query)) {
@@ -157,7 +148,6 @@
                 </div>
               </div>
 
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
@@ -176,8 +166,6 @@
                 </div>
               </div>
 
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
@@ -195,9 +183,6 @@
 
                 </div>
               </div>
-
-
-
 
               <div class="row">
                 <div class="col-md-3 btn-print">
@@ -236,7 +221,6 @@
                                                   echo "selected";
                                                 } ?>>empleado</option>
 
-
                     </select>
                   </div>
                 </div>
@@ -244,8 +228,6 @@
 
                 </div>
               </div>
-
-
 
               <div class="row">
                 <div class="col-md-3 btn-print">
@@ -264,8 +246,6 @@
 
                 </div>
               </div>
-
-
               <button type="submit" class="btn btn-primary">GUARDAR</button>
 
 
@@ -273,26 +253,14 @@
               <hr>
               <div class="modal-footer">
 
-
               </div>
             </form>
-
             <!--end of modal-->
-
           <?php } ?>
-
         </div><!-- /.box-body -->
-
       </div><!-- /.col -->
-
-
     </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -309,10 +277,7 @@
   <!-- /footer content -->
   </div>
   </div>
-
   <?php include 'datatable_script.php'; ?>
-
-
 
   <script>
     $(document).ready(function() {
@@ -323,15 +288,11 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
-
           },
 
           "info": false,
           "lengthChange": false,
           "searching": false,
-
-
           "searching": true,
         }
 
@@ -342,9 +303,6 @@
   // }    
   ?>
 
-
-
-  <!-- /gauge.js -->
 </body>
 
 </html>

@@ -66,20 +66,7 @@
         <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
         <a class="btn btn-warning btn-print" href="usuario_agregar.php" style="height:25%; width:15%; font-size: 12px " role="button">REGISTRAR</a>
 
-
-
-
-
-
-
-
-
-
-
-
         <div class="box-body">
-
-
 
           <div class="box-header">
             <h3 class="box-title"> LISTA USUARIOS</h3>
@@ -92,7 +79,6 @@
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-
                   <th>#</th>
                   <th>Foto</th>
                   <th>Nombre y apellidos</th>
@@ -100,14 +86,11 @@
                   <th>Usuario</th>
                   <th>Tipo Usuario</th>
                   <th>Correo</th>
-
-
                   <th class="btn-print"> Accion </th>
                 </tr>
               </thead>
               <tbody>
                 <?php
-                // $branch=$_SESSION['branch'];
                 $query = mysqli_query($con, "select * from usuario ") or die(mysqli_error());
                 $i = 0;
                 while ($row = mysqli_fetch_array($query)) {
@@ -115,7 +98,6 @@
                   $i++;
                 ?>
                   <tr>
-
                     <td><?php echo $i; ?></td>
                     <td><IMG src="subir_us/<?php echo $row['imagen']; ?>" style="height:50PX" /></td>
                     <td><?php echo $row['nombre'] . '  ' . $row['apellido']; ?></td>
@@ -123,11 +105,8 @@
                     <td><?php echo $row['usuario']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                     <td><?php echo $row['correo']; ?></td>
-
                     <td>
                       <?php
-
-
                       ?>
                       <a class="small-box-footer btn-print" href="<?php echo "eliminar_usuario.php?cid=$cid"; ?>" onClick="return confirm('¿Está seguro de que quieres eliminar usuario??');"><i class="glyphicon glyphicon-remove"></i></a>
                       <a class="btn btn-danger btn-print" href="<?php echo "editar_usuario.php?cid=$cid"; ?>" role="button">Editar</a>
@@ -139,20 +118,12 @@
                   </tr>
 
                   <!--end of modal-->
-
                 <?php } ?>
               </tbody>
-
             </table>
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
 
     </div><!-- /.box-body -->
 

@@ -1,6 +1,4 @@
 <?php include 'header.php';
-
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -14,7 +12,6 @@
 
 <body class="nav-md">
   <?php
-  //    if ($usuario=="si") {
   # code...
 
   ?>
@@ -68,8 +65,6 @@
 
         <?php
 
-        //         if ($guardar=="si") {
-
         ?>
 
         <?php
@@ -91,7 +86,6 @@
 
         <div class="box-body">
 
-
           <?php
           // $branch=$_SESSION['branch'];
           $query = mysqli_query($con, "select * from clientes where id_cliente= '$id_cliente' ") or die(mysqli_error());
@@ -103,7 +97,6 @@
 
             <form class="form-horizontal" method="post" action="cliente_actualizar.php" enctype='multipart/form-data'>
               <input type="hidden" class="form-control" id="id_cliente" name="id_cliente" value="<?php echo $row['id_cliente']; ?>" required>
-
 
         </div>
 
@@ -124,8 +117,6 @@
 
           </div>
         </div>
-
-
         <div class="row">
           <div class="col-md-3 btn-print">
             <div class="form-group">
@@ -162,7 +153,6 @@
           </div>
         </div>
 
-
         <div class="row">
           <div class="col-md-3 btn-print">
             <div class="form-group">
@@ -181,41 +171,24 @@
           </div>
         </div>
 
-
-
         <button type="submit" class="btn btn-primary">GUARDAR</button>
-
-
         <br><br><br>
         <hr>
         <div class="modal-footer">
-
-
         </div>
         </form>
 
         <!--end of modal-->
-
       <?php } ?>
-
       </div><!-- /.box-body -->
-
     </div><!-- /.col -->
-
-
   </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
   </div>
   <!-- /page content -->
-
   <!-- footer content -->
   <footer>
     <div class="pull-right">
@@ -229,8 +202,6 @@
 
   <?php include 'datatable_script.php'; ?>
 
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -240,15 +211,11 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
-
           },
 
           "info": false,
           "lengthChange": false,
           "searching": false,
-
-
           "searching": true,
         }
 
@@ -258,9 +225,6 @@
   <?php
   // }    
   ?>
-
-
-
   <!-- /gauge.js -->
 </body>
 

@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -109,9 +108,6 @@
                 </div>
               </div>
 
-
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
@@ -128,10 +124,6 @@
 
                 </div>
               </div>
-
-
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
@@ -166,19 +158,9 @@
                 </div>
               </div>
 
-
-
               <button type="submit" class="btn btn-primary">Guardar cambios</button>
-
-
-
               <!-- /.input group -->
-
-
-
-
             </form>
-
           </div>
 
           <div class="box-header">
@@ -189,8 +171,6 @@
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-
-
                   <th>Id</th>
                   <th> Nombre Producto</th>
                   <th> Descripcion </th>
@@ -198,7 +178,6 @@
                   <th> Precio venta </th>
                   <th> Imagen </th>
                   <th> Stock </th>
-
                   <th class="btn-print"> Accion </th>
 
                 </tr>
@@ -214,27 +193,16 @@
 
                 ?>
                   <tr>
-
                     <td><?php echo $row['id_pro']; ?></td>
                     <td><?php echo $row['nombre_pro']; ?></td>
                     <td><?php echo $row['descripcion']; ?></td>
                     <td><?php echo $row['unidad']; ?></td>
-
                     <td><?php echo $row['precio_venta']; ?></td>
-
                     <td><IMG src="subir_prod/<?php echo $row['imagen']; ?>" style="height:50PX" /></td>
                     <td><?php echo $row['stock']; ?></td>
-
-
-
-
                     <td>
                       <a class="small-box-footer btn-print" href="<?php echo "eliminar_producto.php?id_pro=$id_pro&tipo=$tipo"; ?>" onclick="return confirm('¿Está seguro de que desea eliminar este producto??');"" > <i class=" glyphicon glyphicon-remove"></i></a>
-
-
-
                       <a href="#updateordinance<?php echo $row['id_pro']; ?>" data-target="#updateordinance<?php echo $row['id_pro']; ?>" data-toggle="modal" style="color:#fff;" class="small-box-footer btn-print"><i class="glyphicon glyphicon-edit text-blue"></i></a>
-
                     </td>
                   </tr>
                   <div id="updateordinance<?php echo $row['id_pro']; ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -277,8 +245,6 @@
                                 </div>
                               </div>
                             </div>
-
-
                             <div class="col-md-12 btn-print">
 
                               <div class="form-group">
@@ -289,9 +255,6 @@
                               </div>
                             </div>
                             <div class="col-md-12 btn-print">
-
-
-
                               <div class="form-group">
                                 <label class="control-label col-lg-3" for="name">Imagen antigua</label>
                                 <div class="input-group col-md-8">
@@ -317,9 +280,6 @@
                                 </div>
                               </div>
                             </div>
-
-
-
                         </div><br><br><br>
                         <hr>
                         <div class="modal-footer">
@@ -333,24 +293,14 @@
                     <!--end of modal-dialog-->
                   </div>
                   <!--end of modal-->
-
                 <?php
                 } ?>
               </tbody>
-
             </table>
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
-
     </div>
     </div>
     </div>
@@ -396,12 +346,10 @@
         );
       });
     </script>
-
   <?php
   }
   ?>
 
-  <!-- /gauge.js -->
 </body>
 
 </html>

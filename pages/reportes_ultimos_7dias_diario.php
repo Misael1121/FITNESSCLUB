@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -60,10 +59,6 @@
               </thead>
               <tbody>
 
-
-
-
-
                 <?php
 
 
@@ -97,12 +92,6 @@
 
                 <?php
 
-
-
-
-
-
-
                 $query = mysqli_query($con, "select * from  venta_diaria AS z INNER JOIN clientes AS c
       ON c.id_cliente = z.id_cliente   where  fecha BETWEEN '$fecha7days' AND '$fechaActual' ") or die(mysqli_error());
                 $i = 1;
@@ -123,7 +112,6 @@
 
 
                       <?php
-                      //          }
                       ?>
 
                     </td>

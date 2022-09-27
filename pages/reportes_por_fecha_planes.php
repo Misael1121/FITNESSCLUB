@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -95,12 +94,9 @@
                   <th>Fecha Inicio </th>
                   <th>Fecha Fin</th>
                   <th class="btn-print"> Accion </th>
-
-
                 </tr>
               </thead>
               <tbody>
-
 
                 <?php
 
@@ -111,8 +107,6 @@
                 ?>
 
                   <?php
-
-
                   $query = mysqli_query($con, "select * from planes AS p INNER JOIN plan_cliente AS z
       ON p.id_plan = z.id_plan INNER JOIN clientes AS c
       ON c.id_cliente = z.id_cliente   where  fecha_inicio >='$fecha_inicio' and fecha_inicio <='$fecha_final'  ") or die(mysqli_error());
@@ -126,20 +120,12 @@
                   <div class="row">
                     <div class="col-md-4 col-lg-12 hide-section">
                       <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Planes =<label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
-
-
-
                     </div>
 
 
                   </div>
 
                   <?php
-
-
-
-
-
 
                   $query = mysqli_query($con, "select * from planes AS p INNER JOIN plan_cliente AS z
       ON p.id_plan = z.id_plan INNER JOIN clientes AS c
@@ -160,17 +146,13 @@
                       <td><?php echo $row['numero_tiempo']; ?></td>
                       <td><?php echo $row['fecha_inicio']; ?></td>
                       <td><?php echo $row['fecha_fin']; ?></td>
-
                       <td>
                         <?php
-
-
                         ?>
                         <a class="btn btn-danger btn-print" href="<?php echo "generar_carnet_plan.php?codigo=$codigo"; ?>" role="button">Ver Comprobante</a>
 
 
                         <?php
-                        //          }
                         ?>
 
                       </td>
@@ -182,15 +164,9 @@
                 }
                 ?>
 
-
                 <!--end of modal-->
 
               </tbody>
-
-
-
-
-
               <!-- /footer content -->
           </div>
         </div>

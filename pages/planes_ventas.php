@@ -65,44 +65,26 @@
         </div><!-- /.box-header -->
         <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
         <a class="btn btn-warning btn-print" href="cliente_agregar.php" style="height:25%; width:15%; font-size: 12px " role="button">NUEVO</a>
-
-
-
-
         <div class="box-body">
-
-
           <!--end of modal-->
-
-
           <div class="box-header">
             <h3 class="box-title"> SELECCIONA CLIENTE</h3>
           </div><!-- /.box-header -->
-
-
-
           <div class="box-body">
 
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-
                   <th>#</th>
-
                   <th>Nombre y apellidos</th>
                   <th>Telefono</th>
                   <th>Edad</th>
                   <th>DPI</th>
-
-
-
-
                   <th class="btn-print"> Accion </th>
                 </tr>
               </thead>
               <tbody>
                 <?php
-                // $branch=$_SESSION['branch'];
                 $query = mysqli_query($con, "select * from clientes ") or die(mysqli_error());
                 $i = 0;
                 while ($row = mysqli_fetch_array($query)) {
@@ -110,47 +92,30 @@
                   $i++;
                 ?>
                   <tr>
-
                     <td><?php echo $i; ?></td>
-
                     <td><?php echo $row['nombre']; ?></td>
                     <td><?php echo $row['telefono']; ?></td>
                     <td><?php echo $row['edad']; ?></td>
                     <td><?php echo $row['dpi']; ?></td>
-
                     <td>
                       <?php
-
 
                       ?>
 
 
                       <a class="btn btn-danger btn-print" href="<?php echo "plan_cliente.php?id_cliente=$id_cliente"; ?>" role="button">selccionar</a>
                       <?php
-                      //          }
                       ?>
-
                     </td>
                   </tr>
-
                   <!--end of modal-->
-
                 <?php } ?>
               </tbody>
-
             </table>
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -167,11 +132,7 @@
   <!-- /footer content -->
   </div>
   </div>
-
   <?php include 'datatable_script.php'; ?>
-
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -181,8 +142,6 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
-
           },
           "lengthMenu": [
             [10, 25, 50, -1],
@@ -197,10 +156,6 @@
     });
   </script>
 
-
-
-
-  <!-- /gauge.js -->
 </body>
 
 </html>

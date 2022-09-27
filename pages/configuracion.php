@@ -1,14 +1,10 @@
 <?php include 'header.php';
-
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
 <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-<!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
 <body class="nav-md">
@@ -69,10 +65,6 @@
             while ($row = mysqli_fetch_array($query)) {
               $id_empresa = $row['id_empresa'];
             ?>
-
-
-
-
 
               <form class="form-horizontal" method="post" action="empresa_actualizar.php" enctype='multipart/form-data'>
 
@@ -166,19 +158,13 @@
                     <IMG src="images/<?php echo $row['imagen']; ?>" style="height:200PX" />
                   </div>
                 </div>
-
-
                 <div class="form-group">
                   <label class="control-label col-lg-3" for="name">Imagen nueva</label>
                   <div class="col-lg-9">
 
                     <input type="file" class="form-control" id="imagen" name="imagen">
                   </div>
-
-
                 </div>
-
-
                 <div class="form-group">
                   <label class="control-label col-lg-3" for="name">Actualizar</label>
                   <div class="col-lg-9">
@@ -187,28 +173,16 @@
 
                   </div>
 
-
                 </div>
-
 
               </form>
 
-
             <?php
             } ?>
-
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
-
     </div>
     </div>
     </div>

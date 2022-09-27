@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('../dist/includes/dbcon.php');
-	//$branch=$_SESSION['branch'];
+
 	$nombre = $_POST['nombre'];
 
 //validamos la imagen
@@ -18,7 +18,6 @@ include('../dist/includes/dbcon.php');
 		else
 		{
 
-				//sacando id ultimo cliente
 
 
    

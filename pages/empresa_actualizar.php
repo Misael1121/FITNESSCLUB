@@ -1,11 +1,9 @@
 
-
-
 <?php session_start();
 if (empty($_SESSION['id'])) :
 endif;
 include('../dist/includes/dbcon.php');
-//$branch=$_SESSION['branch'];
+
 $id_empresa = $_POST['id_empresa'];
 $empresa = $_POST['empresa'];
 $direccion = $_POST['direccion'];
@@ -14,17 +12,9 @@ $correo = $_POST['correo'];
 $por_dia = $_POST['por_dia'];
 $moneda = $_POST['moneda'];
 $simbolo_moneda = $_POST['simbolo_moneda'];
-
-
 $impuesto_diario = $_POST['impuesto_diario'];
 $impuesto_producto = $_POST['impuesto_producto'];
 $impuesto_planes = $_POST['impuesto_planes'];
-
-
-//$target_dir = "images/";
-
-
-
 
 if (!empty($_FILES['imagen']['name'])) {
 
@@ -33,7 +23,6 @@ if (!empty($_FILES['imagen']['name'])) {
 	$target_file = $target_dir . basename($_FILES["imagen"]["name"]);
 	$uploadok = 1;
 	$imagefiletype = pathinfo($target_file, PATHINFO_EXTENSION);
-	//check if image file is a actual image or fake image
 	$check = getimagesize($_FILES["imagen"]["tmp_name"]);
 	if ($check !== false) {
 		echo "archivo es una imagen - " . $check["mime"] . ".";
@@ -42,7 +31,6 @@ if (!empty($_FILES['imagen']['name'])) {
 		echo "el archivo no es una imagen.";
 		$uploadok = 0;
 	}
-
 
 	//check if file already exists
 	if (file_exists($target_file)) {
@@ -56,12 +44,9 @@ if (!empty($_FILES['imagen']['name'])) {
 		$uploadok = 0;
 	}
 
-
-
 	if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) {
 
 		$img = basename($_FILES["imagen"]["name"]);
-
 
 		mysqli_query($con, "update empresa set empresa='$empresa',direccion='$direccion',telefono='$telefono',imagen='$img',correo='$correo',por_dia='$por_dia',moneda='$moneda',simbolo_moneda='$simbolo_moneda',impuesto_diario='$impuesto_diario',impuesto_producto='$impuesto_producto',impuesto_planes='$impuesto_planes' where id_empresa='$id_empresa'") or die(mysqli_error());
 
@@ -78,15 +63,6 @@ if (!empty($_FILES['imagen']['name'])) {
 	echo "<script type='text/javascript'>alert('empresa actualizado correctamente!');</script>";
 	echo "<script>document.location='configuracion.php'</script>";
 }
-
-
-
-
-
-
-
-
-
 
 
 

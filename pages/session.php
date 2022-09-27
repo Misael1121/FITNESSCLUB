@@ -19,9 +19,6 @@ $nombre = $user_row['usuario'];
 $imagen = $user_row['imagen'];
 $tipo = $user_row['tipo'];
 
-
-
-
 $empresa_query = mysqli_query($con, "select * from empresa where id_empresa = '1'") or die(mysql_error());
 $empresa_row = mysqli_fetch_array($empresa_query);
 $imagen_empresa = $empresa_row['imagen'];

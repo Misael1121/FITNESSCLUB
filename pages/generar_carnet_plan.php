@@ -105,10 +105,6 @@ $codigo = $_GET['codigo'];
   }
 
   $total_pgar = $precio + $impuesto_planes;
-
-
-
-
   $session_id = $_SESSION['id'];
   $user_query = mysqli_query($con, "select * from usuario where id = '$session_id'") or die(mysql_error());
   $user_row = mysqli_fetch_array($user_query);
@@ -117,10 +113,7 @@ $codigo = $_GET['codigo'];
 
 
   <div id="page-wrap">
-
     <div class="container">
-
-
       <br>
       <br>
 
@@ -151,7 +144,7 @@ $codigo = $_GET['codigo'];
                 <br>
                 Fecha Fin: <?php echo $fecha_fin; ?>
                 <br>
-                Tiempo: <?php echo $numero_tiempo;  ?>  <?php echo $descripcion; ?>
+                Tiempo: <?php echo $numero_tiempo;  ?> <?php echo $descripcion; ?>
                 <br>
                 Total: Q <?php echo $total_pgar; ?>
                 <br>
@@ -168,7 +161,6 @@ $codigo = $_GET['codigo'];
           <tbody>
           </tbody>
         </table>
-
         <br>
         <br>
         <br>
@@ -186,7 +178,6 @@ $codigo = $_GET['codigo'];
         <br>
         <br>
         <br>
-
         <a class="btn btn-success btn-print" style="    text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -198,20 +189,7 @@ $codigo = $_GET['codigo'];
         <br>
 
       </center>
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-09-2022 a las 00:05:43
+-- Tiempo de generación: 17-09-2022 a las 03:02:40
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -44,7 +44,7 @@ CREATE TABLE `caja` (
 CREATE TABLE `clientes` (
   `id_cliente` int(200) NOT NULL,
   `nombre` varchar(200) NOT NULL,
-  `edad` varchar(200) NOT NULL,
+  `edad` text NOT NULL,
   `telefono` varchar(200) NOT NULL,
   `dpi` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -123,7 +123,16 @@ INSERT INTO `history_log` (`log_id`, `user_id`, `action`, `date`) VALUES
 (220, 5, 'se ha desconectado el sistema en ', '2022-09-13 16:38:20'),
 (221, 5, 'se ha desconectado el sistema en ', '2022-09-13 16:41:17'),
 (222, 5, 'se ha desconectado el sistema en ', '2022-09-13 16:42:40'),
-(223, 5, 'se ha desconectado el sistema en ', '2022-09-13 16:54:48');
+(223, 5, 'se ha desconectado el sistema en ', '2022-09-13 16:54:48'),
+(224, 5, 'se ha desconectado el sistema en ', '2022-09-14 12:24:17'),
+(225, 5, 'se ha desconectado el sistema en ', '2022-09-14 12:50:24'),
+(226, 5, 'se ha desconectado el sistema en ', '2022-09-15 21:46:30'),
+(227, 5, 'se ha desconectado el sistema en ', '2022-09-15 22:37:09'),
+(228, 5, 'se ha desconectado el sistema en ', '2022-09-15 22:44:23'),
+(229, 5, 'se ha desconectado el sistema en ', '2022-09-16 11:14:44'),
+(230, 5, 'se ha desconectado el sistema en ', '2022-09-16 11:41:04'),
+(231, 5, 'se ha desconectado el sistema en ', '2022-09-16 17:02:53'),
+(232, 5, 'se ha desconectado el sistema en ', '2022-09-16 17:25:29');
 
 -- --------------------------------------------------------
 
@@ -159,9 +168,9 @@ CREATE TABLE `planes` (
 --
 
 INSERT INTO `planes` (`id_plan`, `nombre_plan`, `tipo_tiempo`, `numero_tiempo`, `descripcion`, `precio`) VALUES
-(5, '', 'Dias', '1', 'Mensual', '150'),
-(6, '', 'Dias', '15', 'Dias', '90'),
-(8, '', 'Dias', '7', 'Dias', '50');
+(15, 'Plan Semanal', 'dias', '7', 'Dias', '50'),
+(16, 'Plan 15 Dias', 'dias', '15', 'Dias', '90'),
+(17, 'Plan Mensual', 'meses', '1', 'Mes', '150');
 
 -- --------------------------------------------------------
 
@@ -174,13 +183,6 @@ CREATE TABLE `plan_asistencia` (
   `fecha_asistencia` date NOT NULL,
   `plan_cliente` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `plan_asistencia`
---
-
-INSERT INTO `plan_asistencia` (`id_plan_asistencia`, `fecha_asistencia`, `plan_cliente`) VALUES
-(1, '2022-09-11', 9);
 
 -- --------------------------------------------------------
 
@@ -212,6 +214,17 @@ CREATE TABLE `producto` (
   `imagen` varchar(200) NOT NULL,
   `stock` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id_pro`, `nombre_pro`, `descripcion`, `unidad`, `precio_venta`, `imagen`, `stock`) VALUES
+(4, 'Deporade Uva', 'Sabor Uva', '1', '5', 'DeporadeUva.png', '100'),
+(5, 'Deporade Naranja', 'Sabor Naranja', '1', '5', 'DeporadeNaranja.png', '100'),
+(6, 'Deporade Fresa', 'Sabor Fresa', '1', '5', 'DeporadeFresa.png', '100'),
+(7, 'Deporade Chicle', 'Sabor Chicle', '1', '5', 'DeporadeChicle.png', '100'),
+(8, 'Agua', 'Agua Purificada', '1', '5', 'Agua.png', '100');
 
 -- --------------------------------------------------------
 
@@ -434,7 +447,7 @@ ALTER TABLE `caja`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `detalles_pedido`
@@ -452,7 +465,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de la tabla `history_log`
 --
 ALTER TABLE `history_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=233;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -464,7 +477,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `planes`
 --
 ALTER TABLE `planes`
-  MODIFY `id_plan` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_plan` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `plan_asistencia`
@@ -476,13 +489,13 @@ ALTER TABLE `plan_asistencia`
 -- AUTO_INCREMENT de la tabla `plan_cliente`
 --
 ALTER TABLE `plan_cliente`
-  MODIFY `id_plan_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_plan_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `temporal`

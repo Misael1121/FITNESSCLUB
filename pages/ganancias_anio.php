@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -13,8 +12,6 @@
 
 <body class="nav-md">
   <?php
-  //    if ($docentes=="si") {
-  # code...
 
   ?>
   <div class="container body">
@@ -24,7 +21,6 @@
       <!-- top navigation -->
       <?php include 'top_nav.php'; ?>
       <!-- /top navigation -->
-
 
       <style>
         .caja {
@@ -46,22 +42,15 @@
           width: 1000px;
         }
       </style>
-
       <!-- page content -->
       <div class="right_col" role="main">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x-panel">
-
             </div>
-
           </div>
           <!--end of modal-dialog-->
         </div>
-
-
-
-
         <div class="container">
              
               </div>
@@ -70,11 +59,7 @@
 
           <a class="btn btn-success btn-print" href="inicio.php" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
 
-
           <?php
-
-
-
           $cantidad_enero = 0;
           $cantidad_febrero = 0;
           $cantidad_marzo = 0;
@@ -115,9 +100,6 @@
           $diciembre_inicio = $year . "-12-01";
           $diciembre_fin = $year . "-12-31";
 
-
-
-
           ?>
           <?php
 
@@ -127,13 +109,6 @@
           while ($row = mysqli_fetch_array($query)) {
             $cantidad_enero = $row['precio'] + $cantidad_enero;
           }
-
-
-
-
-
-
-
           $query = mysqli_query($con, "select * from planes AS p INNER JOIN plan_cliente AS z
       ON p.id_plan = z.id_plan INNER JOIN clientes AS c
       ON c.id_cliente = z.id_cliente   where fecha_inicio >='$febrero_inicio' and fecha_inicio <='$febrero_fin'") or die(mysqli_error());
@@ -211,11 +186,6 @@
             $cantidad_diciembre = $row['precio'] + $cantidad_diciembre;
           }
 
-
-
-
-
-
           $cantidad_enero_productos = 0;
           $cantidad_febrero_productos = 0;
           $cantidad_marzo_productos = 0;
@@ -235,12 +205,6 @@
           while ($row = mysqli_fetch_array($query)) {
             $cantidad_enero_productos = $row['precio_venta'] + $cantidad_enero_productos;
           }
-
-
-
-
-
-
 
           $query = mysqli_query($con, "select * from pedidos AS p INNER JOIN detalles_pedido AS z
       ON p.num_pedido = z.id_pedido INNER JOIN producto AS c
@@ -319,22 +283,11 @@
             $cantidad_diciembre = $row['precio_venta'] + $cantidad_diciembre;
           }
 
-
-
-
-
-
-
-
-
-
-
           $query = mysqli_query($con, "select * from empresa ") or die(mysqli_error());
           $i = 1;
           while ($row = mysqli_fetch_array($query)) {
             $por_dia = $row['por_dia'];
           }
-
 
           $cantidad_enero_diario = 0;
           $cantidad_febrero_diario = 0;
@@ -353,12 +306,6 @@
           while ($row = mysqli_fetch_array($query)) {
             $cantidad_enero_diario = $por_dia + $cantidad_enero_diario;
           }
-
-
-
-
-
-
 
           $query = mysqli_query($con, "select * from venta_diaria  where fecha >='$febrero_inicio' and fecha <='$febrero_fin'") or die(mysqli_error());
           while ($row = mysqli_fetch_array($query)) {
@@ -415,8 +362,6 @@
             $cantidad_diciembre_diario = $por_dia + $cantidad_diciembre_diario;
           }
 
-
-
           $cantidad_enero_total = 0;
           $cantidad_febrero_total = 0;
           $cantidad_marzo_total = 0;
@@ -430,27 +375,19 @@
           $cantidad_noviembre_total = 0;
           $cantidad_diciembre_total = 0;
 
-
-
           $cantidad_enero_total = $cantidad_enero + $cantidad_enero_productos + $cantidad_enero_diario;
           $cantidad_febrero_total = $cantidad_febrero + $cantidad_febrero_productos + $cantidad_febrero_diario;
           $cantidad_marzo_total = $cantidad_marzo + $cantidad_marzo_productos + $cantidad_marzo_diario;
           $cantidad_abril_total = $cantidad_abril + $cantidad_abril_productos + $cantidad_abril_diario;
-
-
           $cantidad_mayo_total = $cantidad_mayo + $cantidad_mayo_productos + $cantidad_mayo_diario;
           $cantidad_junio_total = $cantidad_junio + $cantidad_junio_productos + $cantidad_junio_diario;
           $cantidad_julio_total = $cantidad_julio + $cantidad_julio_productos + $cantidad_julio_diario;
-
           $cantidad_agosto_total = $cantidad_agosto + $cantidad_agosto_productos + $cantidad_agosto_diario;
           $cantidad_setiembre_total = $cantidad_setiembre + $cantidad_setiembre_productos + $cantidad_setiembre_diario;
           $cantidad_octubre_total = $cantidad_octubre + $cantidad_octubre_productos + $cantidad_octubre_diario;
-
           $cantidad_noviembre_total = $cantidad_noviembre + $cantidad_noviembre_productos + $cantidad_noviembre_diario;
           $cantidad_diciembre_total = $cantidad_diciembre + $cantidad_diciembre_productos + $cantidad_diciembre_diario;
           ?>
-
-
 
           <?php
 
@@ -467,33 +404,15 @@
 
           </div>
           <div class="resultados"><canvas id="grafico"></canvas></div>
-
-
-
-
         </div>
-
         <!--end of modal-->
-
-
         <div class="box-header">
-
         </div><!-- /.box-header -->
         <div class="box-body">
-
-
         </div><!-- /.box-body -->
-
       </div><!-- /.col -->
-
-
     </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -548,7 +467,6 @@
   # code...
 
   ?>
-  <!-- /gauge.js -->
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -131,7 +130,6 @@
 
 
                       <?php
-                      //          }
                       ?>
 
                     </td>

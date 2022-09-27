@@ -38,7 +38,6 @@
           $id_plan_cliente = $_POST['id_plan_cliente'];
         }
 
-
         ?>
 
         <!--end of modal-->
@@ -64,24 +63,12 @@
                   <th>Nombre cliente</th>
                   <th>DPI</th>
                   <th>Fecha asistencia </th>
-
-
-
                 </tr>
               </thead>
               <tbody>
 
-
-
-
-
                 <?php
-
-
                 $fechaActual = date('Y-m-d');
-
-
-
                 ?>
 
                 <?php
@@ -105,20 +92,10 @@
 
                     <a class="btn btn-warning btn-print" disabled="true" style="color:black; height:25%; width:50%; font-size: 25px " role="button">Fecha inicio = <label style='color:white;  font-size: 25px '><?php echo $fecha_inicio; ?></label></a>
                     <a class="btn btn-success btn-print" disabled="true" style="color:black; height:25%; width:50%; font-size: 25px " role="button">Fecha fin = <label style='color:white;  font-size: 25px '><?php echo $fecha_fin; ?></label></a>
-
-
                   </div>
-
-
                 </div>
 
                 <?php
-
-
-
-
-
-
 
                 $query = mysqli_query($con, "select * from plan_asistencia AS p INNER JOIN plan_cliente AS z
       ON p.plan_cliente = z.id_plan_cliente  INNER JOIN clientes AS c
@@ -134,27 +111,15 @@
                     <td><?php echo $row['nombre']; ?></td>
                     <td><?php echo $row['dpi']; ?></td>
                     <td><?php echo $row['fecha_asistencia']; ?></td>
-
-
                   </tr>
 
                 <?php
                 }
 
                 ?>
-
-
                 <!--end of modal-->
 
               </tbody>
-
-
-
-
-
-
-
-
 
               <footer>
 
@@ -164,10 +129,7 @@
           </div>
         </div>
 
-
         <?php include 'datatable_script.php'; ?>
-
-
 
         <script>
           $(document).ready(function() {

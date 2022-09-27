@@ -1,6 +1,4 @@
 <?php include 'header.php';
-
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -47,9 +45,7 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="x-panel">
-
               </div>
-
             </div>
             <!--end of modal-dialog-->
           </div>
@@ -57,8 +53,6 @@
           <div class="box-body">
             <!-- Date range -->
             <form method="post" action="planes_add.php" enctype="multipart/form-data" class="form-horizontal">
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
@@ -75,16 +69,12 @@
                   </div>
                 </div>
                 <div class="col-md-4 btn-print">
-
                 </div>
               </div>
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
                     <label for="date">Nombre</label>
-
                   </div><!-- /.form group -->
                 </div>
                 <div class="col-md-4 btn-print">
@@ -93,16 +83,12 @@
                   </div>
                 </div>
                 <div class="col-md-4 btn-print">
-
                 </div>
               </div>
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
                     <label for="date">Descripcion</label>
-
                   </div><!-- /.form group -->
                 </div>
                 <div class="col-md-4 btn-print">
@@ -114,14 +100,10 @@
 
                 </div>
               </div>
-
-
-
               <div class="row">
                 <div class="col-md-3 btn-print">
                   <div class="form-group">
                     <label for="date">Tiempo</label>
-
                   </div><!-- /.form group -->
                 </div>
                 <div class="col-md-4 btn-print">
@@ -130,12 +112,8 @@
                   </div>
                 </div>
                 <div class="col-md-4 btn-print">
-
                 </div>
               </div>
-
-
-
 
               <div class="row">
                 <div class="col-md-3 btn-print">
@@ -153,22 +131,13 @@
 
                 </div>
               </div>
-
-
-
               <button type="submit" class="btn btn-primary">Guardar cambios</button>
 
-
-
               <!-- /.input group -->
-
-
-
 
             </form>
 
           </div>
-
           <div class="box-header">
             <h3 class="box-title"> Lista planes</h3>
           </div><!-- /.box-header -->
@@ -177,17 +146,13 @@
             <table id="example2" class="table table-bordered table-striped">
               <thead>
                 <tr>
-
-
                   <th>Id</th>
                   <th>Nombre</th>
                   <th>Tipo de tiempo</th>
                   <th> Tiempo Del Plan </th>
                   <th> Descripcion </th>
                   <th> Precio </th>
-
                   <th class="btn-print"> Accion </th>
-
                 </tr>
               </thead>
               <tbody>
@@ -198,31 +163,17 @@
                 while ($row = mysqli_fetch_array($query)) {
                   $id_plan = $row['id_plan'];
                   $tipo_tiempo = $row['tipo_tiempo'];
-
                 ?>
                   <tr>
-
                     <td><?php echo $row['id_plan']; ?></td>
                     <td><?php echo $row['nombre_plan']; ?></td>
                     <td><?php echo $row['tipo_tiempo']; ?></td>
                     <td><?php echo $row['numero_tiempo']; ?></td>
                     <td><?php echo $row['descripcion']; ?></td>
                     <td><?php echo $row['precio']; ?></td>
-
-
-
-
-
-
-
-
                     <td>
                       <a class="small-box-footer btn-print" href="<?php echo "eliminar_plan.php?id_plan=$id_plan"; ?>" onclick="return confirm('¿Está seguro de que desea eliminar este producto??');"" > <i class=" glyphicon glyphicon-remove"></i></a>
-
-
-
                       <a href="#updateordinance<?php echo $row['id_plan']; ?>" data-target="#updateordinance<?php echo $row['id_plan']; ?>" data-toggle="modal" style="color:#fff;" class="small-box-footer btn-print"><i class="glyphicon glyphicon-edit text-blue"></i></a>
-
                     </td>
                   </tr>
                   <div id="updateordinance<?php echo $row['id_plan']; ?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -250,8 +201,6 @@
                                     <option value="meses" <?php if ($tipo_tiempo == "meses") {
                                                             echo "selected";
                                                           } ?>>Meses</option>
-
-
                                   </select>
                                 </div>
                               </div>
@@ -282,8 +231,6 @@
                                 </div>
                               </div>
                             </div>
-
-
                             <div class="col-md-12 btn-print">
 
                               <div class="form-group">
@@ -293,12 +240,6 @@
                                 </div>
                               </div>
                             </div>
-
-
-
-
-
-
                         </div><br><br><br>
                         <hr>
                         <div class="modal-footer">
@@ -307,27 +248,17 @@
                         </div>
                         </form>
                       </div>
-
                     </div>
                     <!--end of modal-dialog-->
                   </div>
                   <!--end of modal-->
-
                 <?php
                 } ?>
               </tbody>
-
             </table>
           </div><!-- /.box-body -->
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
 
     </div>
@@ -335,7 +266,6 @@
     </div>
     </div>
     <!-- /page content -->
-
     <!-- footer content -->
     <footer>
       <div class="pull-right">
@@ -348,8 +278,6 @@
     </div>
 
     <?php include 'datatable_script.php'; ?>
-
-
 
     <script>
       $(document).ready(function() {
@@ -380,7 +308,6 @@
   }
   ?>
 
-  <!-- /gauge.js -->
 </body>
 
 </html>

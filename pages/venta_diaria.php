@@ -49,11 +49,7 @@
           </div>
           <!--end of modal-dialog-->
         </div>
-
-
         <div class="panel-heading">
-
-
         </div>
 
         <!--end of modal-->
@@ -64,41 +60,12 @@
 
         </div><!-- /.box-header -->
 
-
-
-
-
-
         <a class="btn btn-success btn-print" href="<?php echo "venta_diaria_add.php"; ?>" role="button">GENERAR Ticket</a>
-
-
-
-
-
 
 
         <div class="box-body">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <!--end of modal-->
-
-
-
-
 
           <?php
           $query31 = mysqli_query($con, "select * from empresa ") or die(mysqli_error());
@@ -132,38 +99,23 @@
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-
-
                 <th>Nombre cliente</th>
                 <th>DPI</th>
                 <th>Precio</th>
-
-
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><?php echo $nombre; ?></td>
-
                 <td><?php echo $dpi; ?></td>
                 <td><?php echo $por_dia; ?></td>
-
               </tr>
             </tbody>
-
           </table>
 
           <?php
 
-
-
           ?>
-
-
-
-
-
-
           <div class="box-body">
 
             <div class="row">
@@ -180,13 +132,10 @@
                 <table id="example_cliente" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-
                       <th>#</th>
                       <th>Nombre</th>
                       <th>Edad</th>
                       <th>DPI</th>
-
-
                       <th class="btn-print"> Accion </th>
                     </tr>
                   </thead>
@@ -200,24 +149,16 @@
                       $i++;
                     ?>
                       <tr>
-
                         <td><?php echo $i; ?></td>
-
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['edad']; ?></td>
-
                         <td><?php echo $row['dpi']; ?></td>
-
-
                         <td>
                           <?php
-
-
                           ?>
 
                           <a class="btn btn-danger btn-print" href="<?php echo "temporal_add_cliente_diario.php?id_cliente=$id_cliente"; ?>" role="button">SELECCIONAR</a>
                           <?php
-                          //          }
                           ?>
 
                         </td>
@@ -230,7 +171,6 @@
 
                 </table>
                 <script type="text/javascript">
-                  // < ![CDATA[
                   function Eliminar(i) {
                     document.getElementsByTagName("table")[0].setAttribute("id", "tableid");
                     document.getElementById("tableid").deleteRow(i);
@@ -258,30 +198,12 @@
                       }
                     }
                   }
-                  // ]]>
                 </script>
-
               </div>
-
-
-
             </div>
-
-
           </div><!-- /.box-body -->
-
-
-
-
-
         </div><!-- /.col -->
-
-
       </div><!-- /.row -->
-
-
-
-
     </div><!-- /.box-body -->
 
   </div>
@@ -293,7 +215,7 @@
   <!-- footer content -->
   <footer>
     <div class="pull-right">
-      APSYSTEM <a href="#"></a>
+     FITNESSCLUB GYM <a href="#"></a>
     </div>
     <div class="clearfix"></div>
   </footer>

@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
 <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-<!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
 <body class="nav-md">
@@ -50,31 +48,17 @@
           <!--end of modal-dialog-->
         </div>
 
-
         <div class="panel-heading">
-
 
         </div>
 
         <!--end of modal-->
-
-
         <div class="box-header">
           <h3 class="box-title"> REGISTRAR CLIENTE </h3>
-
         </div><!-- /.box-header -->
         <a class="btn btn-warning btn-print" href="cliente.php" style="height:25%; width:15%; font-size: 12px " role="button">Regresar</a>
-
-
-
         <div class="box-body">
-
           <form class="form-horizontal" method="post" action="cliente_add.php" enctype='multipart/form-data'>
-
-
-
-
-
             <div class="row">
               <div class="col-md-3 btn-print">
                 <div class="form-group">
@@ -89,25 +73,20 @@
                 </div>
               </div>
               <div class="col-md-4 btn-print">
-
               </div>
             </div>
-
             <div class="row">
               <div class="col-md-3 btn-print">
                 <div class="form-group">
                   <label for="date">Edad</label>
-
                 </div><!-- /.form group -->
               </div>
               <div class="col-md-4 btn-print">
                 <div class="form-group">
                   <input type="text" class="form-control pull-right" maxlength="11" id="edad" name="edad" placeholder="Edad" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-
                 </div>
               </div>
               <div class="col-md-4 btn-print">
-
               </div>
             </div>
 
@@ -148,33 +127,17 @@
               </div>
             </div>
 
-
             <button type="submit" class="btn btn-primary">Guardar cambios</button>
 
 
             <div class="modal-footer">
 
-
             </div>
           </form>
-
-
-
-
-
         </div><!-- /.box-body -->
-
-
       </div><!-- /.col -->
-
-
     </div><!-- /.row -->
-
-
-
-
-  </div><!-- /.box-body -->
-
+  </div><!-- /box-body -->
   </div>
   </div>
   </div>
@@ -195,8 +158,6 @@
 
   <?php include 'datatable_script.php'; ?>
 
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -206,8 +167,6 @@
               "next": "posterior"
             },
             "search": "Buscar:",
-
-
           },
 
           "info": false,
@@ -221,9 +180,6 @@
       );
     });
   </script>
-
-
-
 
 
   <!-- /gauge.js -->

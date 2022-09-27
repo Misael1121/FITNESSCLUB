@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -32,46 +31,44 @@
           <!--end of modal-dialog-->
         </div>
         <center>
-        <div class="container">
-              <div class="col-md-3">
-             
-                </div>
-              <div class="col-md-3">
-                <form method="post" action="reportes_por_fecha_diario.php" enctype="multipart/form-data" class="form-horizontal">
-              
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha Inicio</label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="date" name="fecha_inicio" required>
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-              </div>
-              <div class="col-md-12 btn-print">
-                <div class="form-group">
-                  <label for="date" class="col-sm-3 control-label">Fecha Final</label>
-                  <div class="input-group col-sm-8">
-                    <input type="date" class="form-control pull-right" id="date" name="fecha_final" required>
-                  </div><!-- /.input group -->
-                </div><!-- /.form group -->
-                <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR ENTRE FECHAS</button>
-              </div>
+          <div class="container">
+                <div class="col-md-3">
+               
+                  </div>
+                <div class="col-md-3">
+                  <form method="post" action="reportes_por_fecha_diario.php" enctype="multipart/form-data" class="form-horizontal">
 
-              <div class="col-md-12">
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha Inicio</label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="date" name="fecha_inicio" required>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                </div>
+                <div class="col-md-12 btn-print">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Fecha Final</label>
+                    <div class="input-group col-sm-8">
+                      <input type="date" class="form-control pull-right" id="date" name="fecha_final" required>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                  <button class="btn btn-lg btn-danger btn-print" id="daterange-btn" name="buscar_fechas">BUSCAR ENTRE FECHAS</button>
+                </div>
+
                 <div class="col-md-12">
-
+                  <div class="col-md-12">
+                  </div>
 
                 </div>
 
-              </div>
-
-            </form>
+              </form>
+                  </div>
+                <div class="col-md-3">
+                 
+                  </div>
                 </div>
-              <div class="col-md-3">
-               
-                </div>
-              </div>
-</center>
+        </center>
         <!--end of modal-->
 
         <div class="box-body">
@@ -81,7 +78,6 @@
           </section>
 
           <a class="btn btn-success btn-print" href="" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Impresión</a>
-
 
           <div class="box-header">
             <h3 class="box-title"> <b> Lista Datos </b></h3>
@@ -94,15 +90,11 @@
                   <th>DPI</th>
                   <th>Fecha </th>
                   <th class="btn-print"> Accion </th>
-
-
                 </tr>
               </thead>
               <tbody>
 
-
                 <?php
-
 
 
                 if (isset($_POST['buscar_fechas'])) {
@@ -146,13 +138,9 @@
                   ?>
 
                     <tr>
-
                       <td><?php echo $row['nombre']; ?></td>
                       <td><?php echo $row['dpi']; ?></td>
                       <td><?php echo $row['fecha']; ?></td>
-
-
-
                       <td>
                         <?php
 
@@ -162,7 +150,6 @@
 
 
                         <?php
-                        //          }
                         ?>
 
                       </td>

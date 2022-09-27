@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -67,16 +66,10 @@
               </thead>
               <tbody>
 
-
-
-
-
                 <?php
 
 
                 $fechaActual = date('Y-m-d');
-
-
 
                 ?>
 
@@ -96,11 +89,7 @@
                   <div class="col-md-4 col-lg-12 hide-section">
                     <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Planes Vendidos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
-
-
                   </div>
-
-
                 </div>
 
                 <?php
@@ -157,7 +146,6 @@
 
 
               <script type="text/javascript">
-                // < ![CDATA[
                 function Eliminar(i) {
                   document.getElementsByTagName("table")[0].setAttribute("id", "tableid");
                   document.getElementById("tableid").deleteRow(i);
@@ -185,7 +173,6 @@
                     }
                   }
                 }
-                // ]]>
               </script>
 
               <!-- /footer content -->

@@ -59,26 +59,11 @@
           <h3 class="box-title"> MENU CAJA</h3>
         </div><!-- /.box-header -->
         <div class="box-body">
-
-
-
-
-
-
-
-
-
-
-
           <div class="box-header with-border">
             <h3 class="box-title"></h3>
           </div><!-- /.box-header -->
           <div class="box-body">
             <div class="row">
-
-
-
-
 
 
               <?php
@@ -105,16 +90,12 @@
 
               ?>
 
-
-
                 <button type="button" class="btn btn-danger btn-lg btn-print" data-toggle="modal" data-target="#miModalcajacerrar">
                   CERRAR CAJA
                 </button>
                 <div class="row">
                   <div class="col-md-4 col-lg-12 hide-section">
                     <a class="btn btn-danger btn-print" disabled="true" style=" color:black; height:25%; width:50%; font-size: 25px " role="button">MONTO CAJA = <label style='color:white;  font-size: 25px '> <?php echo "$simbolo_moneda $acumulado $moneda"; ?></label></a>
-
-
 
                   </div>
 
@@ -124,7 +105,6 @@
               }
 
               ?>
-
 
               <div class="modal fade" id="miModalcajacerrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -147,11 +127,7 @@
 
                       </div>
 
-
-
-
                       <br><br>
-
 
                       <div class="col-md-12">
                         <div class="col-md-12">
@@ -168,14 +144,6 @@
 
                 </div>
               </div>
-
-
-
-
-
-
-
-
 
               <div class="modal fade" id="miModalcaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -197,9 +165,6 @@
                           </div>
 
                       </div>
-
-
-
 
                       <br><br>
 
@@ -224,35 +189,20 @@
             <!--end of modal-->
 
 
-
-
-
-
-
-
-
-
-
             <div class="box-header">
               <h3 class="box-title"> LISTA DE CAJAS</h3>
             </div><!-- /.box-header -->
-
-
 
             <div class="box-body">
 
               <table ID="example22" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-
                     <th>ID</th>
                     <th>Fecha apertura</th>
                     <th>Fecha cierre</th>
                     <th>Estado</th>
                     <th>Monto</th>
-
-
-
                   </tr>
                 </thead>
                 <tbody>
@@ -266,18 +216,11 @@
 
                   ?>
                     <tr>
-
                       <td><?php echo $row['id_caja']; ?></td>
-
-
                       <td><?php echo $row['fecha_apertura']; ?></td>
                       <td><?php echo $row['fecha_cierre']; ?></td>
-
                       <td><?php echo $row['estado']; ?></td>
-
                       <td><?php echo $row['monto']; ?></td>
-
-
                     </tr>
 
                     <!--end of modal-->
@@ -318,34 +261,13 @@
                 // ]]>
               </script>
             </div><!-- /.box-body -->
-
-
-
-
-
-
-
-
-
           </div>
           <!--row-->
-
-
-
-
         </div><!-- /.col (right) -->
       </div><!-- /.box-body -->
-
     </div><!-- /.col -->
-
-
   </div><!-- /.row -->
-
-
-
-
   </div><!-- /.box-body -->
-
   </div>
   </div>
   </div>
@@ -362,11 +284,7 @@
   <!-- /footer content -->
   </div>
   </div>
-
   <?php include 'datatable_script.php'; ?>
-
-
-
   <script>
     $(document).ready(function() {
       $('#example2').dataTable({
@@ -376,23 +294,16 @@
               "next": "Posterior"
             },
             "search": "Buscar:",
-
-
           },
 
           "info": false,
           "lengthChange": false,
           "searching": false,
-
-
           "searching": true,
         }
-
       );
     });
   </script>
-
-
   <!-- /gauge.js -->
 </body>
 

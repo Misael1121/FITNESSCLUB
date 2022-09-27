@@ -1,6 +1,5 @@
 <?php include 'header.php';
 
-//$branch_id = $_GET['id'];
 ?>
 
 <!-- Font Awesome -->
@@ -25,9 +24,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x-panel">
-
             </div>
-
           </div>
           <!--end of modal-dialog-->
         </div>
@@ -60,16 +57,9 @@
               </thead>
               <tbody>
 
-
-
-
-
                 <?php
 
-
                 $fechaActual = date('Y-m-d');
-
-
 
                 ?>
 
@@ -87,20 +77,12 @@
                   <div class="col-md-4 col-lg-12 hide-section">
                     <a class="btn btn-danger btn-print" disabled="true" style="height:25%; width:50%; font-size: 25px " role="button">Total Ventas Productos = <label style='color:black;  font-size: 25px '><?php echo $contador; ?></label></a>
 
-
-
                   </div>
 
 
                 </div>
 
                 <?php
-
-
-
-
-
-
 
                 $query = mysqli_query($con, "select * from detalles_pedido  AS p INNER JOIN  pedidos AS z
       ON z.num_pedido = p.id_pedido INNER JOIN clientes AS c
@@ -123,7 +105,6 @@
 
 
                       <?php
-                      //          }
                       ?>
 
                     </td>
